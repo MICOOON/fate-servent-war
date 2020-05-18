@@ -2,6 +2,12 @@
 using System.Collections;
 
 public class MoveController : MonoBehaviour {
+    private Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     void OnEnable()
     {
@@ -26,7 +32,8 @@ public class MoveController : MonoBehaviour {
     {
         if (move.joystickName == "MoveJoystick")
         {
-            GetComponent<Animation>().CrossFade("idle");
+            //GetComponent<Animation>().CrossFade("idle");
+            animator.SetInteger("state", MoveState.IDLE);
         }
     }
     void OnJoystickMove(MovingJoystick move)
@@ -47,7 +54,8 @@ public class MoveController : MonoBehaviour {
             //移动玩家的位置（按朝向位置移动）
             transform.Translate(Vector3.forward * Time.deltaTime * 5);
             //播放奔跑动画
-            GetComponent<Animation>().CrossFade("run");
+            //GetComponent<Animation>().CrossFade("run");
+            animator.SetInteger("state", MoveState.RUN);
         }
     }
 }
