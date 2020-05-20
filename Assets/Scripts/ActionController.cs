@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MoveController : MonoBehaviour {
+public class ActionController : MonoBehaviour {
     private Animator animator;
 
     private void Start()
@@ -33,7 +33,7 @@ public class MoveController : MonoBehaviour {
         if (move.joystickName == "MoveJoystick")
         {
             //GetComponent<Animation>().CrossFade("idle");
-            animator.SetInteger("state", MoveState.IDLE);
+            animator.SetInteger("state", ActionState.IDLE);
         }
     }
     void OnJoystickMove(MovingJoystick move)
@@ -55,7 +55,23 @@ public class MoveController : MonoBehaviour {
             transform.Translate(Vector3.forward * Time.deltaTime * 5);
             //播放奔跑动画
             //GetComponent<Animation>().CrossFade("run");
-            animator.SetInteger("state", MoveState.RUN);
+            animator.SetInteger("state", ActionState.RUN);
         }
+    }
+
+    /**
+     * 切换到站立状态
+     */
+    public void OnIdle()
+    {
+        animator.SetInteger("state", ActionState.IDLE);
+    }
+
+    /**
+     * 释放技能
+     */
+    public void OnSkill()
+    {
+        animator.SetInteger("state", ActionState.SKILL);
     }
 }
