@@ -111,7 +111,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 64fb451f7653e384aaa400dee23572aa, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: ca2cfabd0d7c7c347886c8f053bc1a7b, type: 2}
 --- !u!198 &42746020 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 19842168, guid: c6494551b90646e458fef7cde325e94e,
@@ -2734,7 +2734,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &2014790654
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2802,7 +2802,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014790653}
   m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 7.2, y: -1.5, z: -14.6}
+  m_LocalPosition: {x: 7.2, y: 0, z: -14.6}
   m_LocalScale: {x: 1, y: 1, z: 17.426956}
   m_Children: []
   m_Father: {fileID: 0}
