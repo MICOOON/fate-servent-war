@@ -47,4 +47,9 @@ public class SoldierMove : MonoBehaviour
         }
         return null;
     }
+
+    public void SetAreaMask(int road) {
+        nav = GetComponent<NavMeshAgent>();
+        nav.areaMask = road;
+    }
 }

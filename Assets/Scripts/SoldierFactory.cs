@@ -8,13 +8,31 @@ public class SoldierFactory : MonoBehaviour
     private GameObject soldierPrefab;
 
     [SerializeField]
-    private Transform birthplace;
-
-    [SerializeField]
     private Transform soldierParent;
 
     [SerializeField]
-    private Transform[] towers;
+    private Transform[] blueBirthplace;
+
+    [SerializeField]
+    private Transform[] redBirthplace;
+
+    [SerializeField]
+    private Transform[] blueTopTowers;
+
+    [SerializeField]
+    private Transform[] blueMiddleTowers;
+
+    [SerializeField]
+    private Transform[] blueBottomTowers;
+
+    [SerializeField]
+    private Transform[] redTopTowers;
+
+    [SerializeField]
+    private Transform[] redMiddleTowers;
+
+    [SerializeField]
+    private Transform[] redBottomTowers;
 
     // Start is called before the first frame update
     void Start()
@@ -28,12 +46,13 @@ public class SoldierFactory : MonoBehaviour
         
     }
 
-    public void CreateSoldier(Transform birthplace, Transform[] towers) {
+    public void CreateSoldier(Transform birthplace, Transform[] towers, int road) {
         GameObject soldier = Instantiate(soldierPrefab, birthplace.position, Quaternion.identity);
         soldier.transform.parent = soldierParent;
 
         SoldierMove soldierMove = soldier.GetComponent<SoldierMove>();
         soldierMove.towers = towers;
+        soldierMove.SetAreaMask(road);
     }
 
     public IEnumerator CreateSoldierGroup(float startTime, float singleTime, float groupTime) {
@@ -42,7 +61,12 @@ public class SoldierFactory : MonoBehaviour
         while (true) {
             for (int i = 0; i < 3; i++)
             {
-                CreateSoldier(birthplace, towers);
+                CreateSoldier(blueBirthplace[0], redTopTowers, 1 << 3);
+                CreateSoldier(blueBirthplace[1], redMiddleTowers, 1 << 4);
+                CreateSoldier(blueBirthplace[2], redBottomTowers, 1 << 5);
+                CreateSoldier(redBirthplace[0], blueTopTowers, 1 << 3);
+                CreateSoldier(redBirthplace[1], blueMiddleTowers, 1 << 4);
+                CreateSoldier(redBirthplace[2], blueBottomTowers, 1 << 5);
 
                 yield return new WaitForSeconds(singleTime);
             }
