@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class SoldierMove : MonoBehaviour
+public class SoldierBean : MonoBehaviour
 {
     private NavMeshAgent nav;
 
@@ -12,6 +12,8 @@ public class SoldierMove : MonoBehaviour
     public Transform target;
 
     public Transform[] towers;
+
+    public int type;
 
     // Start is called before the first frame update
     void Start()

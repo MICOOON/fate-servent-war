@@ -46,13 +46,14 @@ public class SoldierFactory : MonoBehaviour
         
     }
 
-    public void CreateSoldier(Transform birthplace, Transform[] towers, int road) {
+    public void CreateSoldier(SoldierType type, Transform birthplace, Transform[] towers, int road) {
         GameObject soldier = Instantiate(soldierPrefab, birthplace.position, Quaternion.identity);
         soldier.transform.parent = soldierParent;
 
-        SoldierMove soldierMove = soldier.GetComponent<SoldierMove>();
-        soldierMove.towers = towers;
-        soldierMove.SetAreaMask(road);
+        SoldierBean soldierBean = soldier.GetComponent<SoldierBean>();
+        soldierBean.towers = towers;
+        soldierBean.SetAreaMask(road);
+        soldierBean.type = (int) type;
     }
 
     public IEnumerator CreateSoldierGroup(float startTime, float singleTime, float groupTime) {
@@ -61,12 +62,12 @@ public class SoldierFactory : MonoBehaviour
         while (true) {
             for (int i = 0; i < 3; i++)
             {
-                CreateSoldier(blueBirthplace[0], redTopTowers, 1 << 3);
-                CreateSoldier(blueBirthplace[1], redMiddleTowers, 1 << 4);
-                CreateSoldier(blueBirthplace[2], redBottomTowers, 1 << 5);
-                CreateSoldier(redBirthplace[0], blueTopTowers, 1 << 3);
-                CreateSoldier(redBirthplace[1], blueMiddleTowers, 1 << 4);
-                CreateSoldier(redBirthplace[2], blueBottomTowers, 1 << 5);
+                CreateSoldier(SoldierType.BlueSoldier, blueBirthplace[0], redTopTowers, 1 << 3);
+                CreateSoldier(SoldierType.BlueSoldier, blueBirthplace[1], redMiddleTowers, 1 << 4);
+                CreateSoldier(SoldierType.BlueSoldier, blueBirthplace[2], redBottomTowers, 1 << 5);
+                CreateSoldier(SoldierType.RedSoldier, redBirthplace[0], blueTopTowers, 1 << 3);
+                CreateSoldier(SoldierType.RedSoldier, redBirthplace[1], blueMiddleTowers, 1 << 4);
+                CreateSoldier(SoldierType.RedSoldier, redBirthplace[2], blueBottomTowers, 1 << 5);
 
                 yield return new WaitForSeconds(singleTime);
             }
