@@ -112,6 +112,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: ca2cfabd0d7c7c347886c8f053bc1a7b, type: 2}
+--- !u!1 &11706180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 11706181}
+  m_Layer: 0
+  m_Name: BulletBirthplace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &11706181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11706180}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.15999794, y: 23.75, z: 0.27000427}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_Children: []
+  m_Father: {fileID: 1971883315}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &42746020 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 19842168, guid: c6494551b90646e458fef7cde325e94e,
@@ -152,6 +182,10 @@ MonoBehaviour:
   type: 0
   beAttackedHeros: []
   beAttackedSoldiers: []
+  bulletPrefab: {fileID: 2085786427838398193, guid: cbbae788c0a449141bca0eac95ed74d7,
+    type: 3}
+  bulletBirthplace: {fileID: 1381519760}
+  bulletParent: {fileID: 1381519760}
 --- !u!1 &62769515 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 7ed9ad9ac6ab0854aa021d38432fde46,
@@ -186,6 +220,10 @@ MonoBehaviour:
   type: 0
   beAttackedHeros: []
   beAttackedSoldiers: []
+  bulletPrefab: {fileID: 2085786427838398193, guid: cbbae788c0a449141bca0eac95ed74d7,
+    type: 3}
+  bulletBirthplace: {fileID: 1656079057}
+  bulletParent: {fileID: 1656079057}
 --- !u!1001 &68548271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -565,6 +603,66 @@ Transform:
   m_Father: {fileID: 1536316735}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &210132609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 210132610}
+  m_Layer: 0
+  m_Name: BulletBirthplace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &210132610
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210132609}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.15999317, y: 23.75, z: 0.21999359}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_Children: []
+  m_Father: {fileID: 226745109}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &216038932
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 216038933}
+  m_Layer: 0
+  m_Name: BulletBirthplace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &216038933
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216038932}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.05001068, y: 23.75, z: -0.0399971}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_Children: []
+  m_Father: {fileID: 1037630775}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &226745108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -690,6 +788,10 @@ MonoBehaviour:
   type: 0
   beAttackedHeros: []
   beAttackedSoldiers: []
+  bulletPrefab: {fileID: 2085786427838398193, guid: cbbae788c0a449141bca0eac95ed74d7,
+    type: 3}
+  bulletBirthplace: {fileID: 750683498}
+  bulletParent: {fileID: 750683498}
 --- !u!1001 &352004487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1056,6 +1158,36 @@ Transform:
   m_Father: {fileID: 921559988}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &608520158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 608520159}
+  m_Layer: 0
+  m_Name: BulletBirthplace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &608520159
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608520158}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.07000923, y: 23.75, z: -0.09000778}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_Children: []
+  m_Father: {fileID: 1970064982}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &612903634
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,6 +1446,10 @@ MonoBehaviour:
   type: 0
   beAttackedHeros: []
   beAttackedSoldiers: []
+  bulletPrefab: {fileID: 2085786427838398193, guid: cbbae788c0a449141bca0eac95ed74d7,
+    type: 3}
+  bulletBirthplace: {fileID: 1932121168}
+  bulletParent: {fileID: 1932121168}
 --- !u!1 &678236270
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,6 +1544,10 @@ MonoBehaviour:
   type: 0
   beAttackedHeros: []
   beAttackedSoldiers: []
+  bulletPrefab: {fileID: 2085786427838398193, guid: cbbae788c0a449141bca0eac95ed74d7,
+    type: 3}
+  bulletBirthplace: {fileID: 1901826718}
+  bulletParent: {fileID: 1901826718}
 --- !u!1 &692895006
 GameObject:
   m_ObjectHideFlags: 0
@@ -1655,6 +1795,10 @@ MonoBehaviour:
   type: 0
   beAttackedHeros: []
   beAttackedSoldiers: []
+  bulletPrefab: {fileID: 2085786427838398193, guid: cbbae788c0a449141bca0eac95ed74d7,
+    type: 3}
+  bulletBirthplace: {fileID: 608520159}
+  bulletParent: {fileID: 608520159}
 --- !u!1 &741215721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1780,6 +1924,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741215721}
   m_CullTransparentMesh: 0
+--- !u!1 &750683497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 750683498}
+  m_Layer: 0
+  m_Name: BulletBirthplace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &750683498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750683497}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.17499924, y: 23.75, z: 0.2550125}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_Children: []
+  m_Father: {fileID: 750804989}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &750804988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1871,6 +2045,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 750804988}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &781018879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 781018880}
+  m_Layer: 0
+  m_Name: BulletBirthplace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &781018880
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781018879}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.18499374, y: 23.75, z: 0.2299881}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_Children: []
+  m_Father: {fileID: 451888771}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &786110542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2229,6 +2433,10 @@ MonoBehaviour:
   type: 0
   beAttackedHeros: []
   beAttackedSoldiers: []
+  bulletPrefab: {fileID: 2085786427838398193, guid: cbbae788c0a449141bca0eac95ed74d7,
+    type: 3}
+  bulletBirthplace: {fileID: 1125635122}
+  bulletParent: {fileID: 1125635122}
 --- !u!1 &921559987
 GameObject:
   m_ObjectHideFlags: 0
@@ -2259,7 +2467,7 @@ Transform:
   - {fileID: 1536316735}
   - {fileID: 584396458}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &936530090
 GameObject:
@@ -2325,6 +2533,10 @@ MonoBehaviour:
   type: 0
   beAttackedHeros: []
   beAttackedSoldiers: []
+  bulletPrefab: {fileID: 2085786427838398193, guid: cbbae788c0a449141bca0eac95ed74d7,
+    type: 3}
+  bulletBirthplace: {fileID: 1090150735}
+  bulletParent: {fileID: 1090150735}
 --- !u!1 &999441066
 GameObject:
   m_ObjectHideFlags: 0
@@ -2518,6 +2730,66 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1037630774}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1090150734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1090150735}
+  m_Layer: 0
+  m_Name: BulletBirthplace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1090150735
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090150734}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.019989014, y: 23.75, z: -0.09999871}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_Children: []
+  m_Father: {fileID: 891220391}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1125635121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1125635122}
+  m_Layer: 0
+  m_Name: BulletBirthplace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1125635122
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125635121}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.15501022, y: 23.75, z: 0.2850008}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_Children: []
+  m_Father: {fileID: 1826661380}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1179067114 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 7ed9ad9ac6ab0854aa021d38432fde46,
@@ -2552,6 +2824,10 @@ MonoBehaviour:
   type: 0
   beAttackedHeros: []
   beAttackedSoldiers: []
+  bulletPrefab: {fileID: 2085786427838398193, guid: cbbae788c0a449141bca0eac95ed74d7,
+    type: 3}
+  bulletBirthplace: {fileID: 1657087177}
+  bulletParent: {fileID: 1657087177}
 --- !u!1 &1187829136 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 384b0dacb8411c244a33667ba6220995,
@@ -2586,6 +2862,10 @@ MonoBehaviour:
   type: 0
   beAttackedHeros: []
   beAttackedSoldiers: []
+  bulletPrefab: {fileID: 2085786427838398193, guid: cbbae788c0a449141bca0eac95ed74d7,
+    type: 3}
+  bulletBirthplace: {fileID: 11706181}
+  bulletParent: {fileID: 11706181}
 --- !u!1001 &1193214442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2776,6 +3056,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1339271107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1339271108}
+  m_Layer: 0
+  m_Name: BulletBirthplace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1339271108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339271107}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.030002594, y: 23.75, z: -0.030002594}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_Children: []
+  m_Father: {fileID: 1193214443}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1367958876
 GameObject:
   m_ObjectHideFlags: 0
@@ -2868,6 +3178,66 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1367958876}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1378430026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1378430027}
+  m_Layer: 0
+  m_Name: BulletBirthplace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1378430027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378430026}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.15500069, y: 23.75, z: 0.24000168}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_Children: []
+  m_Father: {fileID: 142532721}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1381519759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1381519760}
+  m_Layer: 0
+  m_Name: BulletBirthplace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1381519760
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381519759}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.019989014, y: 23.75, z: -0.08000374}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_Children: []
+  m_Father: {fileID: 573460889}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1434864806
 GameObject:
   m_ObjectHideFlags: 0
@@ -2980,6 +3350,10 @@ MonoBehaviour:
   type: 0
   beAttackedHeros: []
   beAttackedSoldiers: []
+  bulletPrefab: {fileID: 2085786427838398193, guid: cbbae788c0a449141bca0eac95ed74d7,
+    type: 3}
+  bulletBirthplace: {fileID: 2025804025}
+  bulletParent: {fileID: 2025804025}
 --- !u!1 &1501922801
 GameObject:
   m_ObjectHideFlags: 0
@@ -3011,7 +3385,7 @@ Transform:
   - {fileID: 2014790657}
   - {fileID: 1509866271}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1509866270
 GameObject:
@@ -3170,6 +3544,66 @@ Transform:
   m_Father: {fileID: 921559988}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1541593504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1541593505}
+  m_Layer: 0
+  m_Name: BulletBirthplace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1541593505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541593504}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.22500038, y: 23.75, z: 0.34999847}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_Children: []
+  m_Father: {fileID: 705966525}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1571123260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1571123261}
+  m_Layer: 0
+  m_Name: BulletBirthplace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1571123261
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571123260}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.19001007, y: 23.75, z: 0.18001556}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_Children: []
+  m_Father: {fileID: 1524502022}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1590217937
 GameObject:
   m_ObjectHideFlags: 0
@@ -3323,6 +3757,66 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1656079056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1656079057}
+  m_Layer: 0
+  m_Name: BulletBirthplace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1656079057
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656079056}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.039978027, y: 23.75, z: 0.02998352}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_Children: []
+  m_Father: {fileID: 68548272}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1657087176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1657087177}
+  m_Layer: 0
+  m_Name: BulletBirthplace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1657087177
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657087176}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.019989014, y: 23.75, z: -0.049996376}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_Children: []
+  m_Father: {fileID: 646127547}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1673627944 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 7ed9ad9ac6ab0854aa021d38432fde46,
@@ -3357,6 +3851,10 @@ MonoBehaviour:
   type: 0
   beAttackedHeros: []
   beAttackedSoldiers: []
+  bulletPrefab: {fileID: 2085786427838398193, guid: cbbae788c0a449141bca0eac95ed74d7,
+    type: 3}
+  bulletBirthplace: {fileID: 216038933}
+  bulletParent: {fileID: 216038933}
 --- !u!1 &1743061933
 GameObject:
   m_ObjectHideFlags: 0
@@ -3483,6 +3981,10 @@ MonoBehaviour:
   type: 0
   beAttackedHeros: []
   beAttackedSoldiers: []
+  bulletPrefab: {fileID: 2085786427838398193, guid: cbbae788c0a449141bca0eac95ed74d7,
+    type: 3}
+  bulletBirthplace: {fileID: 1541593505}
+  bulletParent: {fileID: 1541593505}
 --- !u!1 &1790000123
 GameObject:
   m_ObjectHideFlags: 0
@@ -3730,6 +4232,10 @@ MonoBehaviour:
   type: 0
   beAttackedHeros: []
   beAttackedSoldiers: []
+  bulletPrefab: {fileID: 2085786427838398193, guid: cbbae788c0a449141bca0eac95ed74d7,
+    type: 3}
+  bulletBirthplace: {fileID: 781018880}
+  bulletParent: {fileID: 781018880}
 --- !u!1 &1844561049 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 384b0dacb8411c244a33667ba6220995,
@@ -3764,6 +4270,10 @@ MonoBehaviour:
   type: 0
   beAttackedHeros: []
   beAttackedSoldiers: []
+  bulletPrefab: {fileID: 2085786427838398193, guid: cbbae788c0a449141bca0eac95ed74d7,
+    type: 3}
+  bulletBirthplace: {fileID: 1378430027}
+  bulletParent: {fileID: 1378430027}
 --- !u!1 &1848948161
 GameObject:
   m_ObjectHideFlags: 0
@@ -3897,6 +4407,40 @@ MonoBehaviour:
   type: 0
   beAttackedHeros: []
   beAttackedSoldiers: []
+  bulletPrefab: {fileID: 2085786427838398193, guid: cbbae788c0a449141bca0eac95ed74d7,
+    type: 3}
+  bulletBirthplace: {fileID: 1339271108}
+  bulletParent: {fileID: 1339271108}
+--- !u!1 &1901826717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1901826718}
+  m_Layer: 0
+  m_Name: BulletBirthplace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1901826718
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901826717}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.1499939, y: 23.75, z: 0.25499344}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_Children: []
+  m_Father: {fileID: 1970913367}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1905190805 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 384b0dacb8411c244a33667ba6220995,
@@ -3931,6 +4475,40 @@ MonoBehaviour:
   type: 0
   beAttackedHeros: []
   beAttackedSoldiers: []
+  bulletPrefab: {fileID: 2085786427838398193, guid: cbbae788c0a449141bca0eac95ed74d7,
+    type: 3}
+  bulletBirthplace: {fileID: 210132610}
+  bulletParent: {fileID: 210132610}
+--- !u!1 &1932121167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1932121168}
+  m_Layer: 0
+  m_Name: BulletBirthplace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1932121168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932121167}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0049972534, y: 23.75, z: -0.104961395}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_Children: []
+  m_Father: {fileID: 805933101}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1970064981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4418,6 +4996,40 @@ MonoBehaviour:
   type: 0
   beAttackedHeros: []
   beAttackedSoldiers: []
+  bulletPrefab: {fileID: 2085786427838398193, guid: cbbae788c0a449141bca0eac95ed74d7,
+    type: 3}
+  bulletBirthplace: {fileID: 1571123261}
+  bulletParent: {fileID: 1571123261}
+--- !u!1 &2025804024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2025804025}
+  m_Layer: 0
+  m_Name: BulletBirthplace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2025804025
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025804024}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.009994507, y: 23.75, z: -0.109996796}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_Children: []
+  m_Father: {fileID: 2095357570}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2095357569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4505,77 +5117,3 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2095357569}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &4539042845595310389
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4539042846046162195, guid: 51e8e9143b20ce24ea75cdd924756df7,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -29.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 4539042846046162195, guid: 51e8e9143b20ce24ea75cdd924756df7,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4539042846046162195, guid: 51e8e9143b20ce24ea75cdd924756df7,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -51.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 4539042846046162195, guid: 51e8e9143b20ce24ea75cdd924756df7,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4539042846046162195, guid: 51e8e9143b20ce24ea75cdd924756df7,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.38268343
-      objectReference: {fileID: 0}
-    - target: {fileID: 4539042846046162195, guid: 51e8e9143b20ce24ea75cdd924756df7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4539042846046162195, guid: 51e8e9143b20ce24ea75cdd924756df7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.92387956
-      objectReference: {fileID: 0}
-    - target: {fileID: 4539042846046162195, guid: 51e8e9143b20ce24ea75cdd924756df7,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4539042846046162195, guid: 51e8e9143b20ce24ea75cdd924756df7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4539042846046162195, guid: 51e8e9143b20ce24ea75cdd924756df7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 4539042846046162195, guid: 51e8e9143b20ce24ea75cdd924756df7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4539042846046162199, guid: 51e8e9143b20ce24ea75cdd924756df7,
-        type: 3}
-      propertyPath: m_Name
-      value: StoneKing
-      objectReference: {fileID: 0}
-    - target: {fileID: 4539042846046162199, guid: 51e8e9143b20ce24ea75cdd924756df7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 51e8e9143b20ce24ea75cdd924756df7, type: 3}

@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum SoldierType
-{
+public enum SoldierType {
     BlueSoldier = 0,
     RedSoldier = 1
 }

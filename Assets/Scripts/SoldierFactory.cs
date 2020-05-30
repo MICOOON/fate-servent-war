@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoldierFactory : MonoBehaviour
-{
+public class SoldierFactory : MonoBehaviour {
     [SerializeField]
     private GameObject soldierPrefab;
 
@@ -35,14 +34,12 @@ public class SoldierFactory : MonoBehaviour
     private Transform[] redBottomTowers;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         StartCoroutine(CreateSoldierGroup(0, 1, 5));
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         
     }
 
@@ -60,8 +57,7 @@ public class SoldierFactory : MonoBehaviour
         yield return new WaitForSeconds(startTime);
 
         while (true) {
-            for (int i = 0; i < 3; i++)
-            {
+            for (int i = 0; i < 3; i++) {
                 CreateSoldier(SoldierType.BlueSoldier, blueBirthplace[0], redTopTowers, 1 << 3);
                 CreateSoldier(SoldierType.BlueSoldier, blueBirthplace[1], redMiddleTowers, 1 << 4);
                 CreateSoldier(SoldierType.BlueSoldier, blueBirthplace[2], redBottomTowers, 1 << 5);

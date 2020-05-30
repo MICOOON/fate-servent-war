@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum TowerType {
-    BlueTower = 0,
-    RedTower = 1
+public class BulletBean : MonoBehaviour {
+    public GameObject target;
 }

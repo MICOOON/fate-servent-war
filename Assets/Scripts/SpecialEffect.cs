@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpecialEffect : MonoBehaviour
-{
+public class SpecialEffect : MonoBehaviour {
     [SerializeField]
     public ParticleSystem fire;
 
-    public void SkillEffect()
-    {
+    public void SkillEffect() {
         fire.Play();
     }
 }

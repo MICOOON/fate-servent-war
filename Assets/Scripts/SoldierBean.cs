@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class SoldierBean : MonoBehaviour
-{
+public class SoldierBean : MonoBehaviour {
     private NavMeshAgent nav;
 
     private Animation ani;
@@ -16,22 +15,19 @@ public class SoldierBean : MonoBehaviour
     public int type;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         nav = GetComponent<NavMeshAgent>();
         ani = GetComponent<Animation>();
         target = FindTarget();
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         Move();
     }
 
     void Move() {
-        if (target == null)
-        {
+        if (target == null) {
             target = FindTarget();
             return;
         }
@@ -40,10 +36,8 @@ public class SoldierBean : MonoBehaviour
     }
 
     Transform FindTarget() {
-        for (int i = 0; i < towers.Length; i++)
-        {
-            if (towers[i] != null)
-            {
+        for (int i = 0; i < towers.Length; i++) {
+            if (towers[i] != null) {
                 return towers[i];
             }
         }

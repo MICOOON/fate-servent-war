@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AliFollow : MonoBehaviour
-{
+public class AliFollow : MonoBehaviour {
     [SerializeField]
     private Transform ali;
 
@@ -11,8 +10,7 @@ public class AliFollow : MonoBehaviour
     public float pzOffset;
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         var px = ali.position.x;
         var py = ali.position.y;
         var pz = ali.position.z;
