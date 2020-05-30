@@ -150,6 +150,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  beAttackedHeros: []
+  beAttackedSoldiers: []
 --- !u!1 &62769515 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 7ed9ad9ac6ab0854aa021d38432fde46,
@@ -182,6 +184,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  beAttackedHeros: []
+  beAttackedSoldiers: []
 --- !u!1001 &68548271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -684,6 +688,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  beAttackedHeros: []
+  beAttackedSoldiers: []
 --- !u!1001 &352004487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1306,6 +1312,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  beAttackedHeros: []
+  beAttackedSoldiers: []
 --- !u!1 &678236270
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,6 +1406,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  beAttackedHeros: []
+  beAttackedSoldiers: []
 --- !u!1 &692895006
 GameObject:
   m_ObjectHideFlags: 0
@@ -1643,6 +1653,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  beAttackedHeros: []
+  beAttackedSoldiers: []
 --- !u!1 &741215721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1873,6 +1885,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 29353b0037ffab44693d97d5aaf7d668, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 29353b0037ffab44693d97d5aaf7d668, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 29353b0037ffab44693d97d5aaf7d668, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2211,6 +2227,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  beAttackedHeros: []
+  beAttackedSoldiers: []
 --- !u!1 &921559987
 GameObject:
   m_ObjectHideFlags: 0
@@ -2305,6 +2323,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  beAttackedHeros: []
+  beAttackedSoldiers: []
 --- !u!1 &999441066
 GameObject:
   m_ObjectHideFlags: 0
@@ -2530,6 +2550,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  beAttackedHeros: []
+  beAttackedSoldiers: []
 --- !u!1 &1187829136 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 384b0dacb8411c244a33667ba6220995,
@@ -2562,6 +2584,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  beAttackedHeros: []
+  beAttackedSoldiers: []
 --- !u!1001 &1193214442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2954,6 +2978,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  beAttackedHeros: []
+  beAttackedSoldiers: []
 --- !u!1 &1501922801
 GameObject:
   m_ObjectHideFlags: 0
@@ -3329,6 +3355,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  beAttackedHeros: []
+  beAttackedSoldiers: []
 --- !u!1 &1743061933
 GameObject:
   m_ObjectHideFlags: 0
@@ -3453,6 +3481,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  beAttackedHeros: []
+  beAttackedSoldiers: []
 --- !u!1 &1790000123
 GameObject:
   m_ObjectHideFlags: 0
@@ -3698,6 +3728,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  beAttackedHeros: []
+  beAttackedSoldiers: []
 --- !u!1 &1844561049 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 384b0dacb8411c244a33667ba6220995,
@@ -3730,6 +3762,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  beAttackedHeros: []
+  beAttackedSoldiers: []
 --- !u!1 &1848948161
 GameObject:
   m_ObjectHideFlags: 0
@@ -3861,6 +3895,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  beAttackedHeros: []
+  beAttackedSoldiers: []
 --- !u!1 &1905190805 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 384b0dacb8411c244a33667ba6220995,
@@ -3893,6 +3929,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  beAttackedHeros: []
+  beAttackedSoldiers: []
 --- !u!1001 &1970064981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4378,6 +4416,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  beAttackedHeros: []
+  beAttackedSoldiers: []
 --- !u!1001 &2095357569
 PrefabInstance:
   m_ObjectHideFlags: 0
