@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BlueTower
   - RedTower
+  - Soldier
   layers:
   - Default
   - TransparentFX
