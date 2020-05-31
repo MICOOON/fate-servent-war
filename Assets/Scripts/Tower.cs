@@ -46,7 +46,7 @@ public class Tower : MonoBehaviour {
         bullet.transform.parent = bulletParent;
 
         BulletBean bulletBean = bullet.GetComponent<BulletBean>();
-        bulletBean.target = GetBulletTarget();
+        bulletBean.SetTarget(GetBulletTarget());
     }
 
     GameObject GetBulletTarget() {
