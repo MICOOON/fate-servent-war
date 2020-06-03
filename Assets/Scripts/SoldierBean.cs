@@ -33,6 +33,17 @@ public class SoldierBean : MonoBehaviour {
         }
         ani.CrossFade("Run");
         nav.SetDestination(target.position);
+
+        float distance = Vector3.Distance(transform.position, target.position);
+        if (distance > 5) {
+            nav.speed = 3.5F;
+        } else {
+            nav.speed = 0;
+            Vector3 targetPos = target.position;
+            Vector3 attackPos = new Vector3(targetPos.x, transform.position.y, targetPos.z);
+            transform.LookAt(attackPos);
+            ani.CrossFade("Attack1");
+        }
     }
 
     Transform FindTarget() {

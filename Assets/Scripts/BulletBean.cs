@@ -23,12 +23,20 @@ public class BulletBean : MonoBehaviour {
 
     private void OnTriggerEnter(Collider collider) {
         if (collider.gameObject.tag.Equals(GameConsts.SOLDIER)) {
-            tower.beAttackedSoldiers.Remove(collider.gameObject);
-            Destroy(collider.gameObject);
+            HpChange hpChange = collider.gameObject.GetComponent<HpChange>();
+            hpChange.beDamaged(0.5F);
+            if (hpChange.hpScript.HpValue <= 0) {
+                tower.beAttackedSoldiers.Remove(collider.gameObject);
+                Destroy(collider.gameObject);
+            }
             Destroy(this.gameObject);
         } else if (collider.gameObject.tag.Equals(GameConsts.PLAYER)) {
-            tower.beAttackedHeros.Remove(collider.gameObject);
-            Destroy(collider.gameObject);
+            HpChange hpChange = collider.gameObject.GetComponent<HpChange>();
+            hpChange.beDamaged(0.5F);
+            if (hpChange.hpScript.HpValue <= 0) {
+                tower.beAttackedHeros.Remove(collider.gameObject);
+                Destroy(collider.gameObject);
+            }
             Destroy(this.gameObject);
         }
     }
