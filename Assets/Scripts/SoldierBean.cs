@@ -59,4 +59,19 @@ public class SoldierBean : MonoBehaviour {
         nav = GetComponent<NavMeshAgent>();
         nav.areaMask = road;
     }
+
+    public void Attack() {
+        if (target == null) {
+            target = FindTarget();
+            return;
+        }
+
+        HpChange hpChange = target.GetComponent<HpChange>();
+        float damage = Random.Range(0.1F, 0.6F);
+        hpChange.beDamaged(damage);
+
+        if (hpChange.hpScript.HpValue <= 0) {
+            Destroy(target.gameObject);
+        }
+    }
 }
