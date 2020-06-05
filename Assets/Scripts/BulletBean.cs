@@ -22,7 +22,10 @@ public class BulletBean : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider collider) {
-        if (collider.gameObject.tag.Equals(GameConsts.SOLDIER)) {
+        if (target != collider.gameObject) {
+            return;
+        }
+        if (collider.tag.Equals(GameConsts.SOLDIER)) {
             HpChange hpChange = collider.gameObject.GetComponent<HpChange>();
             hpChange.beDamaged(0.5F);
             if (hpChange.hpScript.HpValue <= 0) {
@@ -30,7 +33,7 @@ public class BulletBean : MonoBehaviour {
                 Destroy(collider.gameObject);
             }
             Destroy(this.gameObject);
-        } else if (collider.gameObject.tag.Equals(GameConsts.PLAYER)) {
+        } else if (collider.tag.Equals(GameConsts.PLAYER)) {
             HpChange hpChange = collider.gameObject.GetComponent<HpChange>();
             hpChange.beDamaged(0.5F);
             if (hpChange.hpScript.HpValue <= 0) {

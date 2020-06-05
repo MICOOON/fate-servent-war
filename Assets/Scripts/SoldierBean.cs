@@ -12,6 +12,8 @@ public class SoldierBean : MonoBehaviour {
 
     public Transform[] towers;
 
+    public List<Transform> enemies = new List<Transform>();
+
     public int type;
 
     // Start is called before the first frame update
@@ -47,6 +49,11 @@ public class SoldierBean : MonoBehaviour {
     }
 
     Transform FindTarget() {
+        enemies.RemoveAll(t => t == null);
+        if (enemies.Count > 0) {
+            return enemies[0];
+        }
+
         for (int i = 0; i < towers.Length; i++) {
             if (towers[i] != null) {
                 return towers[i];
@@ -66,12 +73,46 @@ public class SoldierBean : MonoBehaviour {
             return;
         }
 
+        float distance = Vector3.Distance(transform.position, target.position);
+        if (distance > 5) {
+            return;
+        }
+
         HpChange hpChange = target.GetComponent<HpChange>();
         float damage = Random.Range(0.1F, 0.6F);
         hpChange.beDamaged(damage);
 
         if (hpChange.hpScript.HpValue <= 0) {
             Destroy(target.gameObject);
+
+            if (enemies.Contains(target.transform)) {
+                enemies.Remove(target.transform);
+            } else {
+                for (int i = 0; i < towers.Length; i++) {
+                    if (towers[i] == target.transform) {
+                        towers[i] = null;
+                    }
+                }
+            }
+
+            nav.SetDestination(target.transform.position);
+            nav.speed = 3.5F;
+            ani.CrossFade("Run");
+        }
+    }
+
+    private void OnTriggerEnter(Collider collider) {
+        if (collider.tag.Equals(GameConsts.PLAYER)) {
+            enemies.Add(collider.transform);
+        } else if (collider.tag.Equals(GameConsts.SOLDIER)) {
+            SoldierBean soldierBean = collider.GetComponent<SoldierBean>();
+            if (soldierBean.type != type) {
+                enemies.Add(soldierBean.transform);
+            }
+        }
+        if (enemies.Count > 0) {
+            Transform newTarget = enemies[0];
+            target = newTarget;
         }
     }
 }

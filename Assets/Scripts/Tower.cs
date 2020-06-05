@@ -54,20 +54,22 @@ public class Tower : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider collider) {
-        if (collider.gameObject.tag.Equals(GameConsts.PLAYER)) {
+        if (collider.tag.Equals(GameConsts.PLAYER)) {
             beAttackedHeros.Add(collider.gameObject);
-        } else {
+        } else if (collider.tag.Equals(GameConsts.SOLDIER)) {
             SoldierBean soldierBean = collider.GetComponent<SoldierBean>();
-            if (soldierBean && this.type != soldierBean.type) {
-                beAttackedSoldiers.Add(collider.gameObject);
+            if (this.type != soldierBean.type) {
+                if (collider.gameObject) {
+                    beAttackedSoldiers.Add(collider.gameObject);
+                }
             }
         }
     }
 
     private void OnTriggerExit(Collider collider) {
-        if (collider.gameObject.tag.Equals(GameConsts.PLAYER)) {
+        if (collider.tag.Equals(GameConsts.PLAYER)) {
             beAttackedHeros.Remove(collider.gameObject);
-        } else {
+        } else if (collider.tag.Equals(GameConsts.SOLDIER)) {
             SoldierBean soldierBean = collider.GetComponent<SoldierBean>();
             if (this.type != soldierBean.type) {
                 beAttackedSoldiers.Remove(collider.gameObject);
