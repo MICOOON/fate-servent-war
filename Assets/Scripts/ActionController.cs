@@ -1,10 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ActionController : MonoBehaviour {
     private Animator animator;
 
+    public List<GameObject> enemies = new List<GameObject>();
+
+    private int type;
+
     private void Start() {
+        // 蓝方:0;红方:1.
+        type = 0;
         animator = GetComponent<Animator>();
     }
 
@@ -62,5 +69,26 @@ public class ActionController : MonoBehaviour {
      */
     public void OnSkill() {
         animator.SetInteger("state", ActionState.SKILL);
+
+        if (enemies.Count > 0) {
+            for (int i = 0; i < enemies.Count; i++) {
+                if (enemies[i].tag.Equals(GameConsts.SOLDIER)) {
+                    SoldierBean soldierBean = enemies[i].GetComponent<SoldierBean>();
+                    if (soldierBean.type != this.type) {
+                        HpChange hpChange = soldierBean.GetComponent<HpChange>();
+                        hpChange.beDamaged(1F);
+
+                        if (hpChange.hpScript.HpValue <= 0) {
+                            Destroy(enemies[i]);
+                            enemies.RemoveAt(i);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private void OnTriggerEnter(Collider collider) {
+        enemies.Add(collider.gameObject);
     }
 }

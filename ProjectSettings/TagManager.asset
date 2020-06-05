@@ -7,6 +7,8 @@ TagManager:
   - BlueTower
   - RedTower
   - Soldier
+  - BluePlayer
+  - RedPlayer
   layers:
   - Default
   - TransparentFX
