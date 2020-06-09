@@ -1,0 +1,5 @@
+C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.Model\bin\Debug\FateServentWar.Model.dll
+C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.Model\bin\Debug\FateServentWar.Model.pdb
+C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.Model\obj\Debug\FateServentWar.Model.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.Model\obj\Debug\FateServentWar.Model.dll
+C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.Model\obj\Debug\FateServentWar.Model.pdb

@@ -1,4 +1,4 @@
 cd /d "%~dp0"
-InstallUtil FateServentWar.Host.exe
+FateServentWar.Host.exe install
 net start FateServentWar
 pause

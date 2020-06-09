@@ -1,9 +1,10 @@
 C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.Host\bin\Debug\FateServentWar.Host.exe.config
 C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.Host\bin\Debug\FateServentWar.Host.exe
 C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.Host\bin\Debug\FateServentWar.Host.pdb
-C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.Host\obj\Debug\FateServentWar.Host.csprojAssemblyReference.cache
-C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.Host\obj\Debug\FateServentWar.Host.ProjectInstaller.resources
-C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.Host\obj\Debug\FateServentWar.Host.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.Host\bin\Debug\Topshelf.dll
 C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.Host\obj\Debug\FateServentWar.Host.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.Host\obj\Debug\FateServentWar.Host.csproj.CopyComplete
 C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.Host\obj\Debug\FateServentWar.Host.exe
 C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.Host\obj\Debug\FateServentWar.Host.pdb
+C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.Host\bin\Debug\log4net.dll
+C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.Host\obj\Debug\FateServentWar.Host.csprojAssemblyReference.cache

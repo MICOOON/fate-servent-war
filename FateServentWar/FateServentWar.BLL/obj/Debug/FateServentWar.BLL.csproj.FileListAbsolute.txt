@@ -1,0 +1,6 @@
+C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.BLL\bin\Debug\FateServentWar.BLL.dll
+C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.BLL\bin\Debug\FateServentWar.BLL.pdb
+C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.BLL\obj\Debug\FateServentWar.BLL.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.BLL\obj\Debug\FateServentWar.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.BLL\obj\Debug\FateServentWar.BLL.dll
+C:\Users\Administrator\source\repos\FateServentWar\FateServentWar.BLL\obj\Debug\FateServentWar.BLL.pdb
