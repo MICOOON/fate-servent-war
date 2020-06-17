@@ -34,6 +34,7 @@ public class SelectHandler : MonoBehaviour, IHandler
                 Ready(model.GetMessage<SelectModel>());
                 break;
             case SelectProtocol.FIGHT_BRO:
+                Application.LoadLevel(3);
                 break;
             case SelectProtocol.SELECT_BRO:
                 Select(model.GetMessage<SelectModel>());
