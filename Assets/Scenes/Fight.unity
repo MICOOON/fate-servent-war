@@ -1280,7 +1280,6 @@ GameObject:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
-  - component: {fileID: 534669906}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1319,10 +1318,10 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 100
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1345,28 +1344,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.42261827, y: 0, z: 0, w: 0.9063079}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: -50.1, y: 30.2, z: -104.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50, y: 0, z: 0}
---- !u!114 &534669906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eae216a6d5557894bb9bfb5aa51a28fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ali: {fileID: 786236110}
-  pyOffset: 7.5
-  pzOffset: -5.5
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!1001 &535301858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2948,12 +2932,6 @@ Transform:
   m_Father: {fileID: 451888771}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &786236110 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8853753144189003173, guid: 7e7acf25547eb2e49914c0547bab57ff,
-    type: 3}
-  m_PrefabInstance: {fileID: 8853753144966850411}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &789492185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6338,6 +6316,7 @@ GameObject:
   - component: {fileID: 1848948168}
   - component: {fileID: 1848948167}
   - component: {fileID: 1848948166}
+  - component: {fileID: 1848948169}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -6469,6 +6448,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce1b800252b9f2c4e9e62dba9745122c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1848948169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848948161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d695e4f2573964db758926f97717fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1852293651 stripped
