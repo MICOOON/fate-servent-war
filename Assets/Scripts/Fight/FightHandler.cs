@@ -66,7 +66,7 @@ public class FightHandler : MonoBehaviour, IHandler
             this.models.Add(fightModel.id, pc);
 
             if (fightModel.id == GameData.user.id) {
-                FightManager.instance.InitView(pc);
+                FightManager.instance.InitView((FightPlayerModel) fightModel, pc);
             }
         }
 
@@ -81,6 +81,10 @@ public class FightHandler : MonoBehaviour, IHandler
                 pc = obj.GetComponent<PlayerCon>();
             }
             this.models.Add(fightModel.id, pc);
+
+            if (fightModel.id == GameData.user.id) {
+                FightManager.instance.InitView((FightPlayerModel)fightModel, pc);
+            }
         }
     }
 

@@ -20,6 +20,9 @@ public class FightManager : MonoBehaviour
 
     public PlayerCon myHero;
 
+    [SerializeField]
+    private SkillGrid[] skills;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,8 +61,11 @@ public class FightManager : MonoBehaviour
         }
     }
 
-    public void InitView(PlayerCon hero) {
+    public void InitView(FightPlayerModel model, PlayerCon hero) {
         myHero = hero;
+        for (int i = 0; i < model.skills.Length; i++) {
+            skills[i].Init(model.skills[i]);
+        }
     }
 
     public void LookAt() {
