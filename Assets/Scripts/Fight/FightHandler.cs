@@ -64,6 +64,10 @@ public class FightHandler : MonoBehaviour, IHandler
                 pc = obj.GetComponent<PlayerCon>();
             }
             this.models.Add(fightModel.id, pc);
+
+            if (fightModel.id == GameData.user.id) {
+                FightManager.instance.InitView(pc);
+            }
         }
 
         foreach (var fightModel in fightRoom.teamTwo) {

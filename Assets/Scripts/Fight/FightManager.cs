@@ -18,6 +18,8 @@ public class FightManager : MonoBehaviour
     // 相机垂直方向
     private int cameraV;
 
+    public PlayerCon myHero;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +56,14 @@ public class FightManager : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    public void InitView(PlayerCon hero) {
+        myHero = hero;
+    }
+
+    public void LookAt() {
+        cameraMain.transform.position = myHero.transform.position + new Vector3(2, 14, -10);
     }
 
     // 相机横移, 向右传1, 向左传-1

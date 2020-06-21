@@ -36,7 +36,8 @@ public class SceneProcess : MonoBehaviour, IPointerClickHandler
             FightManager.instance.CameraVMove(0);
         }
         if (Input.GetKey(KeyCode.Space)) {
-
+            // 固定视角, 看向玩家
+            FightManager.instance.LookAt();
         }
     }
 
