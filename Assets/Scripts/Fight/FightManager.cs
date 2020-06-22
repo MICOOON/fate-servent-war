@@ -1,8 +1,10 @@
 ﻿using GameProtocol;
+using GameProtocol.constans;
 using GameProtocol.dto.fight;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FightManager : MonoBehaviour
 {
@@ -19,6 +21,18 @@ public class FightManager : MonoBehaviour
     private int cameraV;
 
     public PlayerCon myHero;
+
+    // 英雄头像
+    [SerializeField]
+    private Image head;
+
+    // 英雄名称
+    [SerializeField]
+    private Text nameText;
+
+    // 英雄等级
+    [SerializeField]
+    private Text levelText;
 
     [SerializeField]
     private SkillGrid[] skills;
@@ -61,11 +75,22 @@ public class FightManager : MonoBehaviour
         }
     }
 
+    // 初始化界面
     public void InitView(FightPlayerModel model, PlayerCon hero) {
         myHero = hero;
+        // 初始化英雄头像面板
+        head.sprite = Resources.Load<Sprite>("HeroIcon/" + model.code);
+        nameText.text = HeroData.heroMap[model.code].name;
+        levelText.text = model.level.ToString();
+        // 技能初始化
         for (int i = 0; i < model.skills.Length; i++) {
             skills[i].Init(model.skills[i]);
         }
+    }
+
+    // 刷新界面
+    public void RefreshView(FightPlayerModel model) {
+        levelText.text = model.level.ToString();
     }
 
     public void LookAt() {

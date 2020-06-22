@@ -8123,6 +8123,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myHero: {fileID: 0}
+  head: {fileID: 192415906}
+  nameText: {fileID: 1775253492}
+  levelText: {fileID: 1628955021}
   skills:
   - {fileID: 822918405}
   - {fileID: 699560911}
