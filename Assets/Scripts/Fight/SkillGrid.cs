@@ -20,6 +20,9 @@ public class SkillGrid : MonoBehaviour
 
     private float nowTime; // 现在剩余的冷却时间
 
+    [SerializeField]
+    private Image skillIntroduce;
+
     // 初始化技能图标
     public void Init(FightSkill skill) {
         this.skill = skill;
@@ -64,5 +67,17 @@ public class SkillGrid : MonoBehaviour
             }
             mask.fillAmount = nowTime / maxTime;
         }
+    }
+
+    // 获取焦点
+    public void PointEnter() {
+        // 打开介绍面板
+        skillIntroduce.gameObject.SetActive(true);
+    }
+
+    // 失去焦点
+    public void PointExit() {
+        // 关闭介绍面板
+        skillIntroduce.gameObject.SetActive(false);
     }
 }
