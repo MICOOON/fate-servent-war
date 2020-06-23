@@ -40,7 +40,12 @@ public class SceneProcess : MonoBehaviour, IPointerClickHandler
         }
     }
 
+    // 鼠标点击玩家移动
     public void OnPointerClick(PointerEventData eventData) {
-
+        switch (eventData.pointerId) {
+            case PointerInputModule.kMouseRightId:
+                FightManager.instance.RightClick(eventData.position);
+                break;
+        }
     }
 }

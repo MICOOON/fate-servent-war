@@ -20,6 +20,8 @@ public class FightHandler : MonoBehaviour, IHandler
 
     private FightRoomModel fightRoom;
 
+    private Dictionary<int, PlayerCon> models = new Dictionary<int, PlayerCon>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,9 @@ public class FightHandler : MonoBehaviour, IHandler
             case FightProtocol.START_BRO:
                 StartGame(model.GetMessage<FightRoomModel>());
                 break;
+            case FightProtocol.MOVE_BRO:
+                Move(model.GetMessage<MoveDTO>());
+                break;
         }
     }
 
@@ -48,22 +53,35 @@ public class FightHandler : MonoBehaviour, IHandler
         // 加载队伍一的模型
         foreach (var fightModel in fightRoom.teamOne) {
             GameObject obj;
+            PlayerCon pc;
             if (fightModel.type == ModelType.HUMAN) {
                 // 加载人物模型
                 obj = Instantiate(Resources.Load<GameObject>("Prefabs/Human/" + fightModel.code), blueHeroBirthplace.position, Quaternion.identity);
+                pc = obj.GetComponent<PlayerCon>();
             } else {
                 // 加载建筑模型
                 obj = Instantiate(Resources.Load<GameObject>("Prefabs/Build/1_" + fightModel.code), blueTowerPositions[fightModel.code - 1].position, Quaternion.identity);
+                pc = obj.GetComponent<PlayerCon>();
             }
+            this.models.Add(fightModel.id, pc);
         }
 
         foreach (var fightModel in fightRoom.teamTwo) {
             GameObject obj;
+            PlayerCon pc;
             if (fightModel.type == ModelType.HUMAN) {
                 obj = Instantiate(Resources.Load<GameObject>("Prefabs/Human/" + fightModel.code), redHeroBirthplace.position, Quaternion.identity);
+                pc = obj.GetComponent<PlayerCon>();
             } else {
                 obj = Instantiate(Resources.Load<GameObject>("Prefabs/Build/2_" + fightModel.code), redTowerPositions[fightModel.code - 1].position, Quaternion.identity);
+                pc = obj.GetComponent<PlayerCon>();
             }
+            this.models.Add(fightModel.id, pc);
         }
+    }
+
+    public void Move(MoveDTO value) {
+        Vector3 target = new Vector3(value.x, value.y, value.z);
+        models[value.userId].SendMessage("Move", target);
     }
 }

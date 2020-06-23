@@ -1,4 +1,5 @@
 ﻿using GameProtocol;
+using GameProtocol.dto.fight;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -66,6 +67,28 @@ public class FightManager : MonoBehaviour
     public void CameraVMove(int dir) {
         if (cameraV != dir) {
             cameraV = dir;
+        }
+    }
+
+    public void RightClick(Vector2 position) {
+        Ray ray = cameraMain.ScreenPointToRay(position);
+        RaycastHit[] hits = Physics.RaycastAll(ray, 200);
+
+        for (int i = 0; i < hits.Length; i++) {
+            RaycastHit item = hits[i];
+            // 如果是敌方单位, 则进行普通攻击.
+
+            // 如果是己方单位, 则无视
+            // 如果是地板层, 则开始寻路
+            if (item.transform.gameObject.layer == LayerMask.NameToLayer("Ground")) {
+                MoveDTO dto = new MoveDTO();
+                dto.x = item.point.x;
+                dto.y = item.point.y;
+                dto.z = item.point.z;
+
+                this.WriteMessage(Protocol.TYPE_FIGHT, 0, FightProtocol.MOVE_CREQ, dto);
+                return;
+            }
         }
     }
 }
