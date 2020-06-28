@@ -41,7 +41,7 @@ public class FightManager : MonoBehaviour
     void Start()
     {
         instance = this;
-         cameraMain = Camera.main;
+        cameraMain = Camera.main;
         // 加载场景
         this.WriteMessage(Protocol.TYPE_FIGHT, 0, FightProtocol.ENTER_CREQ, null);
     }
@@ -118,7 +118,12 @@ public class FightManager : MonoBehaviour
         for (int i = 0; i < hits.Length; i++) {
             RaycastHit item = hits[i];
             // 如果是敌方单位, 则进行普通攻击.
-
+            if (item.transform.gameObject.layer == LayerMask.NameToLayer("Enemy")) {
+                PlayerCon con = item.transform.gameObject.GetComponent<PlayerCon>();
+                if (Vector3.Distance(myHero.transform.position, item.transform.position) < con.data.aRange) {
+                    this.WriteMessage(Protocol.TYPE_FIGHT, 0, FightProtocol.ATTACK_CREQ, con.data.id);
+                }
+            }
             // 如果是己方单位, 则无视
             // 如果是地板层, 则开始寻路
             if (item.transform.gameObject.layer == LayerMask.NameToLayer("Ground")) {

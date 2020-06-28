@@ -6,10 +6,15 @@ using UnityEngine.AI;
 
 public class PlayerCon : MonoBehaviour
 {
+    [HideInInspector]
     public FightPlayerModel data;
 
     protected Animator anim;
     protected NavMeshAgent agent;
+
+    // 角色头顶信息
+    [SerializeField]
+    private PlayerTitle title;
 
     // Start is called before the first frame update
     void Start()
@@ -49,5 +54,15 @@ public class PlayerCon : MonoBehaviour
     // 技能释放回调方法
     public virtual void Skilled() {
 
+    }
+
+    public void Init(FightPlayerModel data, int myTeam) {
+        this.data = data;
+        title.Init(data, data.team == myTeam);
+        if (data.team != myTeam) {
+            this.gameObject.layer = LayerMask.NameToLayer("Enemy");
+        } else {
+            this.gameObject.layer = LayerMask.NameToLayer("Friend");
+        }
     }
 }
