@@ -230,15 +230,8 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.3118295
-        functionName: SkillEffect
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.91129667
-        functionName: OnIdle
+      - time: 0.7513812
+        functionName: Attacked
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

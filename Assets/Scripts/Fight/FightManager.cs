@@ -37,6 +37,9 @@ public class FightManager : MonoBehaviour
     [SerializeField]
     private SkillGrid[] skills;
 
+    // 当前英雄是否死亡
+    public bool dead = false;
+
     // Start is called before the first frame update
     void Start()
     {

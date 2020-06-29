@@ -43,8 +43,38 @@ public class FightHandler : MonoBehaviour, IHandler
                 Move(model.GetMessage<MoveDTO>());
                 break;
             case FightProtocol.ATTACK_BRO:
-                Attack(model.GetMessage<AttackDTO>());
+                //Attack(model.GetMessage<AttackDTO>());
                 break;
+            case FightProtocol.DAMAGE_BRO:
+                //Damage(model.GetMessage<DamegeDTO>());
+                break;
+        }
+    }
+
+    public void Damage(DamageDTO value) {
+        // int[]中第一个是id号, 第二个指的是伤害值, 第三个指的是是否死亡, 0代表死亡, 1代表没有死亡
+        foreach (int[] item in value.target) {
+            // 获取敌方模型
+            PlayerCon pc = models[item[0]];
+            pc.data.hp -= item[1];
+            // 实例化掉血数字
+            pc.HpChange();
+            // 刷新界面
+            if (pc.data.id == GameData.user.id) {
+                FightManager.instance.RefreshView(pc.data);
+            }
+            // 判断是否死亡
+            if (item[2] == 0) {
+                // 击杀的是英雄或者小兵
+                if (item[0] >= 0) {
+                    pc.gameObject.SetActive(false);
+                    if (pc.data.id == GameData.user.id) {
+                        FightManager.instance.dead = true;
+                    }
+                } else {
+                    Destroy(pc.gameObject);
+                }
+            }
         }
     }
 
@@ -115,10 +145,10 @@ public class FightHandler : MonoBehaviour, IHandler
     }
 
     // 普通攻击
-    public void Attack(AttackDTO dto) {
-        PlayerCon obj = models[dto.userId];
-        PlayerCon target = models[dto.targetId];
-        // 调用攻击的方法
-        obj.Attack(new Transform[] {target.transform});
-    }
+    //public void Attack(AttackDTO dto) {
+    //    PlayerCon obj = models[dto.userId];
+    //    PlayerCon target = models[dto.targetId];
+    //    // 调用攻击的方法
+    //    obj.Attack(new Transform[] {target.transform});
+    //}
 }

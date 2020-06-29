@@ -16,6 +16,8 @@ public class PlayerCon : MonoBehaviour
     [SerializeField]
     private PlayerTitle title;
 
+    protected int state = ActionState.IDLE;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,10 +25,8 @@ public class PlayerCon : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void HpChange() {
+        title.HpChange(1F * data.hp / data.maxMp);
     }
 
     // 移动
@@ -34,6 +34,7 @@ public class PlayerCon : MonoBehaviour
         agent.ResetPath();
         agent.SetDestination(target);
         anim.SetInteger("state", ActionState.RUN);
+        state = ActionState.RUN;
     }
 
     // 申请攻击 攻击的目标
