@@ -51,32 +51,33 @@ public class FightHandler : MonoBehaviour, IHandler
         }
     }
 
-    public void Damage(DamageDTO value) {
-        // int[]中第一个是id号, 第二个指的是伤害值, 第三个指的是是否死亡, 0代表死亡, 1代表没有死亡
-        foreach (int[] item in value.target) {
-            // 获取敌方模型
-            PlayerCon pc = models[item[0]];
-            pc.data.hp -= item[1];
-            // 实例化掉血数字
-            pc.HpChange();
-            // 刷新界面
-            if (pc.data.id == GameData.user.id) {
-                FightManager.instance.RefreshView(pc.data);
-            }
-            // 判断是否死亡
-            if (item[2] == 0) {
-                // 击杀的是英雄或者小兵
-                if (item[0] >= 0) {
-                    pc.gameObject.SetActive(false);
-                    if (pc.data.id == GameData.user.id) {
-                        FightManager.instance.dead = true;
-                    }
-                } else {
-                    Destroy(pc.gameObject);
-                }
-            }
-        }
-    }
+    //public void Damage(DamageDTO value) {
+    //    // int[]中第一个是id号, 第二个指的是伤害值, 第三个指的是是否死亡, 0代表死亡, 1代表没有死亡
+    //    foreach (int[] item in value.target) {
+    //        // 获取敌方模型
+    //        PlayerCon pc = models[item[0]];
+    //        pc.data.hp -= item[1];
+    //        // 实例化掉血数字
+    //        FightManager.instance.NumUp(pc.transform, item[1].ToString());
+    //        pc.HpChange();
+    //        // 刷新界面
+    //        if (pc.data.id == GameData.user.id) {
+    //            FightManager.instance.RefreshView(pc.data);
+    //        }
+    //        // 判断是否死亡
+    //        if (item[2] == 0) {
+    //            // 击杀的是英雄或者小兵
+    //            if (item[0] >= 0) {
+    //                pc.gameObject.SetActive(false);
+    //                if (pc.data.id == GameData.user.id) {
+    //                    FightManager.instance.dead = true;
+    //                }
+    //            } else {
+    //                Destroy(pc.gameObject);
+    //            }
+    //        }
+    //    }
+    //}
 
     // 游戏开始
     // 进入场景后加载模型

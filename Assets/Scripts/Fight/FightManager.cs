@@ -40,6 +40,9 @@ public class FightManager : MonoBehaviour
     // 当前英雄是否死亡
     public bool dead = false;
 
+    [SerializeField]
+    private Transform numParent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -98,6 +101,15 @@ public class FightManager : MonoBehaviour
 
     public void LookAt() {
         cameraMain.transform.position = myHero.transform.position + new Vector3(2, 14, -10);
+    }
+
+    // 实例化掉血数字
+    public void NumUp(Transform p, string value) {
+        GameObject hp = Instantiate(Resources.Load<GameObject>("Prefabs/Hp"));
+        hp.GetComponent<Text>().text = value;
+        hp.transform.parent = numParent;
+        hp.transform.localScale = Vector3.one;
+        hp.transform.localPosition = Camera.main.WorldToScreenPoint(p.position);
     }
 
     // 相机横移, 向右传1, 向左传-1
