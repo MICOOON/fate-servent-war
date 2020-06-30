@@ -94,6 +94,25 @@ public class FightManager : MonoBehaviour
         }
     }
 
+    public void RefreshLevelUp() {
+        for (int i = 0; i < myHero.data.skills.Length; i++) {
+            if (myHero.data.skills[i].nextLevel <= myHero.data.level) {
+                if (myHero.data.free > 0) {
+                    // 打开升级按钮
+                    skills[i].SetBtnState(true);
+                } else {
+                    // 关闭升级按钮
+                    skills[i].SetBtnState(false);
+                }
+            } else {
+                // 关闭升级按钮
+                skills[i].SetBtnState(false);
+            }
+            skills[i].SkillChange(myHero.data.skills[i]);
+            skills[i].SetMask(0);
+        }
+    }
+
     // 刷新界面
     public void RefreshView(FightPlayerModel model) {
         levelText.text = model.level.ToString();

@@ -1,4 +1,5 @@
-﻿using GameProtocol.dto.fight;
+﻿using GameProtocol;
+using GameProtocol.dto.fight;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,6 +23,9 @@ public class SkillGrid : MonoBehaviour
 
     [SerializeField]
     private Image skillIntroduce;
+
+    [SerializeField]
+    private Button levelUpBtn;
 
     // 初始化技能图标
     public void Init(FightSkill skill) {
@@ -79,5 +83,18 @@ public class SkillGrid : MonoBehaviour
     public void PointExit() {
         // 关闭介绍面板
         skillIntroduce.gameObject.SetActive(false);
+    }
+
+    public void SkillChange(FightSkill skill) {
+        this.skill = skill;
+    }
+
+    public void SetBtnState(bool state) {
+        levelUpBtn.interactable = state;
+    }
+
+    public void LevelUp() {
+        // 向服务器发送消息, 申请技能升级
+        this.WriteMessage(Protocol.TYPE_FIGHT, 0, FightProtocol.SKILL_UP_CREQ, skill.code);
     }
 }

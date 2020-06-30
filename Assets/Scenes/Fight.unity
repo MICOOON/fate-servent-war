@@ -788,7 +788,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 192488720}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1637778531}
+        m_MethodName: LevelUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &192488720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2745,6 +2756,7 @@ MonoBehaviour:
   mask: {fileID: 1558820345}
   backGround: {fileID: 699560912}
   skillIntroduce: {fileID: 1229364734}
+  levelUpBtn: {fileID: 1913394927}
 --- !u!114 &699560912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3758,6 +3770,7 @@ MonoBehaviour:
   mask: {fileID: 1224436012}
   backGround: {fileID: 822918403}
   skillIntroduce: {fileID: 1229364734}
+  levelUpBtn: {fileID: 1101644303}
 --- !u!114 &822918406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4123,7 +4136,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 895938587}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1495102696}
+        m_MethodName: LevelUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &895938587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4889,7 +4913,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1101644304}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 822918405}
+        m_MethodName: LevelUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1101644304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6495,6 +6530,7 @@ MonoBehaviour:
   mask: {fileID: 201897971}
   backGround: {fileID: 1495102697}
   skillIntroduce: {fileID: 1229364734}
+  levelUpBtn: {fileID: 895938586}
 --- !u!114 &1495102697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7458,6 +7494,7 @@ MonoBehaviour:
   mask: {fileID: 1005954483}
   backGround: {fileID: 1637778532}
   skillIntroduce: {fileID: 1229364734}
+  levelUpBtn: {fileID: 192488719}
 --- !u!114 &1637778532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9002,7 +9039,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1913394928}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 699560911}
+        m_MethodName: LevelUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1913394928
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -48,9 +48,25 @@ public class FightHandler : MonoBehaviour, IHandler
             case FightProtocol.DAMAGE_BRO:
                 //Damage(model.GetMessage<DamegeDTO>());
                 break;
+            case FightProtocol.SKILL_UP_SRES:
+                SkillLevelUp(model.GetMessage<FightSkill>());
+                break;
         }
     }
 
+    // 技能升级处理
+    public void SkillLevelUp(FightSkill skill) {
+        for (int i = 0; i < FightManager.instance.myHero.data.skills.Length; i++) {
+            if (FightManager.instance.myHero.data.skills[i].code == skill.code) {
+                FightManager.instance.myHero.data.free -= 1;
+                FightManager.instance.myHero.data.skills[i] = skill;
+                FightManager.instance.RefreshLevelUp();
+                return;
+            }
+        }
+    }
+
+    // 伤害处理
     //public void Damage(DamageDTO value) {
     //    // int[]中第一个是id号, 第二个指的是伤害值, 第三个指的是是否死亡, 0代表死亡, 1代表没有死亡
     //    foreach (int[] item in value.target) {
