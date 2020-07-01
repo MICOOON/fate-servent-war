@@ -1,4 +1,5 @@
-﻿using GameProtocol;
+﻿using Assets.Scripts.Fight;
+using GameProtocol;
 using GameProtocol.constans;
 using GameProtocol.dto.fight;
 using System.Collections;
@@ -45,6 +46,11 @@ public class FightManager : MonoBehaviour {
     // 当前鼠标左键点击释放的技能ID
     public int skill = -1;
 
+    private Queue<IAction> _queueAction = new Queue<IAction>();
+
+    private int _frameCount = 0;
+    private bool _bWait = false;
+
     // Start is called before the first frame update
     void Start() {
         instance = this;
@@ -55,6 +61,17 @@ public class FightManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if (!_bWait) {
+            if (_frameCount++ % 5 == 0) {
+                while (_queueAction.Count > 0) {
+                    _queueAction.Dequeue().ProcessAction();
+                    // 把所有的消息打成一个包发给服务器
+                }
+                //_bWait = true;
+                //return;
+            }
+        }
+
         switch (cameraH) {
             case 1:
                 if (cameraMain.transform.position.x <= 70) {
@@ -188,7 +205,12 @@ public class FightManager : MonoBehaviour {
                 dto.y = item.point.y;
                 dto.z = item.point.z;
 
-                this.WriteMessage(Protocol.TYPE_FIGHT, 0, FightProtocol.MOVE_CREQ, dto);
+                MoveAction action = new MoveAction(Protocol.TYPE_FIGHT, 0, FightProtocol.MOVE_CREQ, dto);
+                if (action != null) {
+                    _queueAction.Enqueue(action);
+                }
+
+                //this.WriteMessage(Protocol.TYPE_FIGHT, 0, FightProtocol.MOVE_CREQ, dto);
                 return;
             }
         }
