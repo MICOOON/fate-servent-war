@@ -97,4 +97,12 @@ public class SkillGrid : MonoBehaviour
         // 向服务器发送消息, 申请技能升级
         this.WriteMessage(Protocol.TYPE_FIGHT, 0, FightProtocol.SKILL_UP_CREQ, skill.code);
     }
+
+    // 鼠标左键点击技能指定
+    public void PointClick() {
+        if (nowTime > 0) {
+            return;
+        }
+        FightManager.instance.skill = skill.code;
+    }
 }

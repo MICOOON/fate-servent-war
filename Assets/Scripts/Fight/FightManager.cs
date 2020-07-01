@@ -6,8 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FightManager : MonoBehaviour
-{
+public class FightManager : MonoBehaviour {
     // 单例模式
     public static FightManager instance;
 
@@ -43,9 +42,11 @@ public class FightManager : MonoBehaviour
     [SerializeField]
     private Transform numParent;
 
+    // 当前鼠标左键点击释放的技能ID
+    public int skill = -1;
+
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         instance = this;
         cameraMain = Camera.main;
         // 加载场景
@@ -53,8 +54,7 @@ public class FightManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         switch (cameraH) {
             case 1:
                 if (cameraMain.transform.position.x <= 70) {
@@ -145,11 +145,33 @@ public class FightManager : MonoBehaviour
         }
     }
 
+    public void LeftClick(Vector2 position) {
+        if (skill == -1) {
+            return;
+        }
+        Ray ray = cameraMain.ScreenPointToRay(position);
+        RaycastHit[] hits = Physics.RaycastAll(ray, 200);
+        List<Transform> list = new List<Transform>();
+        Vector3 tigger = Vector3.zero;
+        //for (int i = 0; i < hits.Length; i++) {
+        for (int i = hits.Length - 1; i >= 0; i--) {
+            RaycastHit item = hits[i];
+            if (item.transform.gameObject.layer == LayerMask.NameToLayer("Ground")) {
+                tigger = item.point;
+            }
+            list.Add(item.transform); // 添加所有的敌人
+        }
+        myHero.BaseSkill(skill, list.ToArray(), tigger);
+        // 将当前释放的技能重置回来
+        skill = -1;
+    }
+
     public void RightClick(Vector2 position) {
         Ray ray = cameraMain.ScreenPointToRay(position);
         RaycastHit[] hits = Physics.RaycastAll(ray, 200);
 
-        for (int i = 0; i < hits.Length; i++) {
+        //for (int i = 0; i < hits.Length; i++) {
+        for (int i = hits.Length - 1; i >= 0; i--) {
             RaycastHit item = hits[i];
             // 如果是敌方单位, 则进行普通攻击.
             if (item.transform.gameObject.layer == LayerMask.NameToLayer("Enemy")) {

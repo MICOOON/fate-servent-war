@@ -47,6 +47,9 @@ public class SceneProcess : MonoBehaviour, IPointerClickHandler
             case PointerInputModule.kMouseRightId:
                 FightManager.instance.RightClick(eventData.position);
                 break;
+            case PointerInputModule.kMouseLeftId:
+                FightManager.instance.LeftClick(eventData.position);
+                break;
         }
     }
 }

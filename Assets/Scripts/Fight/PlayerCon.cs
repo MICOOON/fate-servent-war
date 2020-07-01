@@ -57,6 +57,11 @@ public class PlayerCon : MonoBehaviour
 
     }
 
+    // 本地操作, 申请技能释放
+    public virtual void BaseSkill(int code, Transform[] target, Vector3 ps) {
+
+    }
+
     public void Init(FightPlayerModel data, int myTeam) {
         this.data = data;
         title.Init(data, data.team == myTeam);
